@@ -1,0 +1,10 @@
+{
+  "name": "kort",
+  "scripts": {
+    "open": "kort.exe",
+    "build:win": "gcc ./src/main.c -o kort.exe -g -O0 -Wall -I./src/include -L./src/lib -lraylib -lgdi32 -lwinmm && yarn open",
+    "build:dev": "node build-dev.js && npm run open",
+    "build:release": "node build-release.js && npm run open"
+  },
+  "license": "MIT"
+}
