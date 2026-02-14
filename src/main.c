@@ -613,7 +613,6 @@ void DrawCommandWithLineNumbers(Font font, bool useFont,
 int main() {
     FileItem files[MAX_FILES];
     int fileCount = 0;
-
     char scriptDir[512];
     getScriptsPath(scriptDir, sizeof(scriptDir));
 
@@ -663,6 +662,8 @@ int main() {
     initModal(&modal);
 
     int executingIndex = -1;
+    Image icon = LoadImage("icons/logo.png");
+    SetWindowIcon(icon);
 
     while (!WindowShouldClose()) {
         Vector2 mousePoint = GetMousePosition();
